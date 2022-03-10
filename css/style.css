@@ -67,6 +67,7 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 24px;
   max-width: 600px;
   width: 100%;
   background-image: url("../images/left-bg.jpg");
@@ -96,7 +97,17 @@ li{
   color: #fff;
   letter-spacing: 2px;
   text-transform: uppercase;
+  transition: background-color 0.4s ease;
 }
+
+.hero-link:hover{
+  background-color: rgba(30, 144, 255, 0.8);
+}
+
+.hero-link:active{
+  background-color: rgba(30, 144, 255, 0.6);
+}
+
 .hero-link-inner {
   display: flex;
   padding: 12px 24px;
