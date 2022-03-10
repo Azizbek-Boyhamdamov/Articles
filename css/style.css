@@ -19,9 +19,11 @@ body{
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Arial", sans-serif;
+  font-family:'Bebas Neue', "Arial", sans-serif;
   background-color: #fff;
   color: #222;
+
+
 }
 
 img{
@@ -29,10 +31,17 @@ img{
   height: auto;
 }
 
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
 /* CONTAINER */
 .container{
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   padding-left: 50px;
   padding-right: 50px;
   margin-left: auto;
@@ -41,10 +50,73 @@ img{
 
 /* MAIN-CONTENT */
 .main-content{
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
+.content-wrapper {
+  display: flex;
+  flex-grow: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  background-image: url("../images/left-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+.hero-content {
+  max-width: 285px;
+
+}
+.hero-hesding {
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+
+
+.hero-link {
+  display: inline-block;
+  background-color: #1e90ff;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.hero-link-inner {
+  display: flex;
+  padding: 12px 24px;
+}
+.hero-link-inner::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/star.svg")  ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 15px;
+}
+
+
+
 
 /* BACKGROUND-IMAGE FOR RETINA SCREENS */
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -53,4 +125,9 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
+  .hero{
+    background-image: url("../images/left-bg@2x.jpg");
+  }
+
 }
+
